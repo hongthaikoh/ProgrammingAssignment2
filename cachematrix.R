@@ -32,8 +32,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## The following function inverses special "matrix" created with the above function. 
 ## However, it first checks to see if the matrix has already been inverted. 
 ## If so, it gets the inverted matrix from the cache and skips the inversion. 
-## Otherwise, it calculates the mean of the data and sets the value of the mean in the cache 
-## via the setmean function
+## Otherwise, it inverses the matrix and sets the inverted matrix in the cache 
+## via the setmatrix function
 cacheSolve <- function(x, ...) {
 	## Return a matrix that is the inverse of 'x'
 	m <- x$getmatrix()
